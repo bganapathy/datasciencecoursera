@@ -8,8 +8,6 @@ testdata <- read.table("test.txt")
 
 #Pre- requiste 3: Load the features data
 
-Pre- requiste 3:featuresdata <- read.table("features.txt")
-
 #Step 1: Merge the two data sets : Trainging and Test.
 
 mergeData <- rbind(testdata,traindata)
@@ -18,7 +16,7 @@ mergeData <- rbind(testdata,traindata)
 which(duplicated(mergeData))
 
 #Step 2:Extract the data for mean and standard Deviation from the merged data set.
-extractedData <- mergeData[dim(mergeData)[1]554:561]
+extractedData <- mergeData[554:561]
 
 #Step 3 & 4: Assign names to the columns of the extracted data set.
 names(extractedData) <-c("Walking","WalkingUpstairs","WalkingDownstairs","Sitting","Standing","Laying","Talking")
